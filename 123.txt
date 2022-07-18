@@ -1,0 +1,35 @@
+class Selection_sort
+{
+    void PrintArray (int[] arr)
+    {
+        for(int I=0; I<(arr.length-1); I++)
+    {
+        int smallest=I;
+        for(int i=I+1; i<(arr.length); i++)
+        {
+            if(arr[i]<arr[smallest])
+            {
+                smallest = i;
+            }
+        }
+        int temp = arr[I];
+        arr[I]=arr[smallest];
+        arr[smallest]=temp;
+    }
+    }
+}
+public class Sorting_algo
+{
+    public static void main(String[] args)
+    {
+        int[] arr1={8 , 9 , 4 , 2 , 3};
+        Selection_sort S=new Selection_sort();
+        S.PrintArray(arr1);
+        System.out.println("Sorted Array : ");
+        for(int a=0; a< arr1.length;a++)
+        {
+            System.out.print(arr1[a]+" ");
+        }
+
+    }
+}
